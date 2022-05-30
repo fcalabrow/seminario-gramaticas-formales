@@ -15,14 +15,29 @@ startCategory('C').
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONSIGNA 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% showParse([una,madriguera,arm,-aron,las,liebres]).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SEGUNDO COMMIT %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[]::[=>'T',+foc,'C']. % Rasgo Focalización que atrae al SD
+[una]::[='NSG','DSG',-ac,-foc]. % Todo el SD se desplaza primero al SV y luego al SC (foco)
 
-[]::[=>'T',+foc,'C']. % agrego el rasgo focalización en el sintagma tiempo para que ascienda -foc al rol de esp. del núcleo
-[-an]::[=>v,+nom,'T']. % agrego nueva terminación que solo exije argumento externo (nadar es intransitivo)
-[las]::[='NPL','DPL',-nom]. % El determinante plural selecciona nombres plurales (NPL)
-[liebres]::['NPL']. 
-[arm]::[='DSG',+ac,'V']. % El verbo (V) selecciona determinante singulares (DSG)
-[nad]::['V']. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONSIGNA 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-startCategory('C').
+% showParse([las,tortugas,arm,-aron,una,madriguera]).
+[tortugas]::['NPL'].
+
+% showParse([las,tortugas,nad,-aron]).
+[nad]::['V'].
+
+% showParse([las,tortugas,nad,-an]).
+[-an]::[=>v,+nom,'T'].
+
+% showParse([quienes,arm,-aron,esa,madriguera]).
+[]::[=>'T',+wh,'C']. % Licencia al pronombre interrogativo, que se desplaza primero al especificador de Sv y luego al especificador del SP
+[quienes]::['DPL',-nom,-wh].
+[esa]::[='NSG','DSG',-ac].
+
+% showParse([quienes,arm,-aban,una,madriguera]).
+[-aban]::[=>v,+nom,'T'].
+
+% showParse([las,liebres,mir,-aban,esa,madriguera]).
+[mir]::[='DSG',+ac,'V'].
