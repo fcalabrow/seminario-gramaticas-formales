@@ -1,0 +1,15 @@
+:- S, NP, NC
+
+# Determinantes
+
+el => NP/NC
+la => NP/NC
+
+# Nombres comunes
+
+león => NC
+leona => NC
+
+# Verbos
+
+corre => S\NP
