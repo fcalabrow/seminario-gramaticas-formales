@@ -1,15 +1,24 @@
-:- S, NP, NC
+:- S, NP, NC, P
 
 # Determinantes
 
-el => NP/NC
-la => NP/NC
+el => NP[masc]/NC[masc]
+la => NP[fem]/NC[fem]
 
 # Nombres comunes
 
-león => NC
-leona => NC
+león => NC[masc]
+leona => NC[fem]
+
+# Participio
+
+cansado => P[masc]
+cansada => P[fem]
 
 # Verbos
 
 corre => S\NP
+está => (S\NP[masc,anim])/P[masc]
+está=> (S\NP[fem,anim])/P[fem]
+
+
